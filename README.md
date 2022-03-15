@@ -32,30 +32,28 @@
 
 This is IBAN number validation API written in Node Js.
 
-- API server runs at 3000 port, port number can be configured in server.js file.
-- After server starts, API can be accessed at localhost:3000
-- API has one endpoint GET /ibanvalidation/{params}
-- Params can be one IBAN number, or many numbers separated with semicolon. Example: /ibanvalidation/LT487044060008228908,LT487044060008228909
-- Endpoint returns a JSON object that can be used anywhere.
+- API server runs on 3000 port. Port number can be configured in server.js file.
+- After server starts, API can be accessed at localhost:3000.
+- API has one endpoint /ibanvalidation/:params
+- Params can be one IBAN code, or many codes separated with comma. Example: /ibanvalidation/LT487044060008228908,LT487044060008228909
+- API returns a JSON object that can be used in a backend or frontend applications.
+- Validation algorithm runs asynchronously so it doesn't block server and allows API requests for many users.
 - To test how API works, simply enter localhost:3000/ibanvalidation/LT487044060008228908,LT487044060008228909 in your browser and press Enter. API will return JSON object with results.
-- Buys healing items when 1 live is left. So that the player can replenish his health and achieve score.
-- Shows each step how game is played.
+- There are unit tests for validation algorithm functions.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
 
-The section below shows a list of used technologies, libraries and IDE
-
+The section below shows a list of used technologies and libraries.
 
 * [JavaScript](https://www.javascript.com/)
 * [Node v14.15.4](https://nodejs.org/en/download/) 
-* [dotenv](https://www.npmjs.com/package/dotenv/) 
+* [Express JS](https://expressjs.com)
+* [Jest](https://jestjs.io)
+* [Babel](https://babeljs.io)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ## Getting Started
@@ -65,20 +63,26 @@ To get a local copy up and running follow these simple Installation steps.
 
 ### Installation
 
-1. Clone the repo
+1. Download code from:
    ```sh
-   git clone https://github.com/leopardcoder/dragon
+   https://github.com/leopardcoder/ibanvalidation
    ```
 2. Run NPM packages
    ```sh
    npm install
-   ```
-3. Check if .env file exists in root folder and contains URL variable with value 'dragonsofmugloar.com' 
+   ``` 
 4. Run: 
    ```sh
-   node startGame.js
+   node server.js
    ```
- 
+   
+   
+   
+### Running tests:
+   For tests run:
+   ```sh
+   npm test
+   ```
 
    
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -87,8 +91,10 @@ To get a local copy up and running follow these simple Installation steps.
 
 ## Project Structure
 
-- `/dragon-main/` the root folder
-- `/dragon-main/src` project source file
+- `/validation/` the root folder
+- `/validation/data/` list of IBAN length with country codes.
+- `/validation/src/` validation algorithm source file and test file.
+- `/validation/routes/` ibanValidation route source file.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -97,7 +103,7 @@ To get a local copy up and running follow these simple Installation steps.
 
 Linas Mockus - linas.mockus@gmail.com
 
-Project Link: [https://github.com/leopardcoder/dragon)
+Project Link: [https://github.com/leopardcoder/ibanValidation)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
