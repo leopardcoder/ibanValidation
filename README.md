@@ -91,10 +91,10 @@ To get a local copy up and running follow these simple Installation steps.
 
 ## Project Structure
 
-- `/validation/` the root folder
-- `/validation/data/` list of IBAN length with country codes.
-- `/validation/src/` validation algorithm source file and test file.
-- `/validation/routes/` ibanValidation route source file.
+- `/` the root folder
+- `/data/` list of IBAN length with country codes.
+- `/src/` validation algorithm source file and test file.
+- `/routes/` ibanValidation route source file.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
