@@ -30,7 +30,7 @@
 
 ## About The Project
 
-This is IBAN number validation API written in Node Js.
+This is IBAN code validation API written in Node Js.
 
 - API server runs on 3000 port. Port number can be configured in server.js file.
 - After server starts, API can be accessed at localhost:3000.
