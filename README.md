@@ -35,7 +35,7 @@ This is IBAN code validation API written in Node Js.
 - API server runs on 3000 port. Port number can be configured in server.js file.
 - After server starts, API can be accessed at localhost:3000.
 - API has one endpoint /ibanvalidation/:params
-- Params can be one IBAN code, or many codes separated with comma. Example: /ibanvalidation/LT487044060008228908,LT487044060008228909
+- Params can be one IBAN code, or many codes separated with comma. Example: /ibanvalidation/LT487044060008228908,LT487044060008228909,...,n
 - API returns a JSON object that can be used in a backend or frontend applications.
 - JSON structure: 
 [{"iban":"LT487044060008228908","validity":true},{"iban":"AD1400080001001234567891","validity":false}]
