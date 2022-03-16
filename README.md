@@ -38,7 +38,7 @@ This is IBAN code validation API written in Node Js.
 - Params can be one IBAN code, or many codes separated with comma. Example: /ibanvalidation/LT487044060008228908,LT487044060008228909
 - API returns a JSON object that can be used in a backend or frontend applications.
 - Validation algorithm runs asynchronously so it doesn't block server and allows API requests for many users.
-- To test how API works, simply enter localhost:3000/ibanvalidation/LT487044060008228908,LT487044060008228909 in your browser and press Enter. API will return JSON object with results.
+- To test how API works after installation and run instructions simply enter http://localhost:3000/ibanvalidation/LT487044060008228908,LT487044060008228909 in your browser and press Enter. API will return JSON object with results.
 - There are unit tests for validation algorithm functions.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
