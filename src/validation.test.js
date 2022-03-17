@@ -28,7 +28,7 @@ test("Enter more than one IBAN code. Should check all IBAN codes and return IBAN
         "validity": false
     }, {"iban": "LT48704406000822890813", "validity": false}]);
 })
-test("Enter any string or number that length is more than 34. SHould return object with entered string and validity false.", () => {
+test("Enter any string or number that length is less than 5 (Minimal IBAN length). SHould return object with entered string and validity false.", () => {
     expect(getCountryIbanData(['LT48'])).toEqual([{"iban": "LT48", "validity": false}]);
 })
 
