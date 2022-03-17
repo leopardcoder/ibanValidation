@@ -24,7 +24,7 @@ export function getCountryIbanData(ibanArray) {
     return newArray
 }
 
-function rearrangeIban(ibanObjectsArray) {
+export function rearrangeIban(ibanObjectsArray) {
     let newArray = []
     ibanObjectsArray.forEach(ibanObject => {
         if (ibanObject.validity) {
@@ -43,7 +43,7 @@ function rearrangeIban(ibanObjectsArray) {
     })
     return newArray
 }
-function convertIbanToInt(rearrangedIbanObjects) {
+export function convertIbanToInt(rearrangedIbanObjects) {
     let newArray = []
     rearrangedIbanObjects.forEach(ibanObject => {
         if (ibanObject.validity) {
@@ -68,7 +68,7 @@ function convertIbanToInt(rearrangedIbanObjects) {
     })
     return newArray
 }
-function getFinalResults(ibanIntObjects) {
+export function getFinalResults(ibanIntObjects) {
     let finalResults = []
     ibanIntObjects.forEach(ibanIntObject => {
         if (ibanIntObject.validity) {
@@ -84,7 +84,7 @@ function getFinalResults(ibanIntObjects) {
     })
     return finalResults
 }
-function calculateMod97(ibanIntegers, ibanLength, remainder = '') {
+export function calculateMod97(ibanIntegers, ibanLength, remainder = '') {
 
     if (ibanIntegers !== undefined && ibanLength > 0) {
         let nineDigitsNumber = ibanIntegers.length == ibanLength ? ibanIntegers.slice(0, 9) : remainder + ibanIntegers.slice(0, 7)
